@@ -84,6 +84,10 @@ a:hover {
   color: #535bf2;
 }
 .new-form{text-align: center; }
+#transaction{margin-top: 200px; border:2px solid whitesmoke}
+.single-Transact{padding:5px;border:3px solid white}
+#company{text-align: center;}
+#amount{margin-left:500px;}
 
 /* body {
   margin: 0;

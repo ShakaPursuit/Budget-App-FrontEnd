@@ -8,7 +8,19 @@ const ShowAllTransactions = () => {
 
     
 
-//    
+const balanceColor=()=>{
+    if(parseInt(balance)>100){
+
+return "green"
+
+    }else{
+
+        return "default"
+    }
+
+
+
+}
     
 
     
@@ -49,7 +61,7 @@ const ShowAllTransactions = () => {
 
 <div key={index+1} id="date">{`${item.date}`}&nbsp;&nbsp;</div>
 <div  key={index+2}id="company"><Link to={`/transactions/${index}`}>{`${item.item_name}`}</Link> &nbsp;&nbsp;-&nbsp;{item.from}</div>
-<div key={index+3}id="amount">  {`${item.amount}`}</div>
+<div key={index+3}id="amount">  ${`${item.amount}`}</div>
                  
                     
                     
@@ -57,7 +69,7 @@ const ShowAllTransactions = () => {
                     </div></>)
             })}
 <>
-<div id="accountBalance"><strong>{(JSON.stringify(balance))}</strong></div>
+<div id="accountBalance"><strong>Account Balance:&nbsp;&nbsp;<div id="balance" className={balanceColor()}>${(JSON.stringify(balance))}</div></strong></div>
 </>
         </div>
         </>)

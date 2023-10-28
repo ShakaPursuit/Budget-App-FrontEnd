@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,7 +12,51 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+} */
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+/* :root{width:100%;height:100%} */
+
+
+header{background-color: lightcoral;height: 100px;position: fixed;width: 100%;}
+
+#head{margin-top: 25px;}
+#new-Log{position:absolute; top:25px; right:10px;width:100px;height:50px}
+#container{height:100vh}
+#label{margin-top: 100px;}
+td{text-align: center;}
+form{margin-top: 100px; border :2px solid white;border-radius: 50px;}
+
+
+
+:root {
+  display: grid;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color:blueviolet;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  height:100%;
+  /* max-width: 644px; */
+
+}
+input{margin-top: 150px;}
+
+
+div#root{display:grid ; max-width: 700px;}
 
 a {
   font-weight: 500;
@@ -22,21 +66,39 @@ a {
 a:hover {
   color: #535bf2;
 }
+body{height:100%;display: grid;}
 
-body {
+div#root{height:100%};
+ th{text-align: center;}
+
+#form{text-align: center;border: 2px solid yellow;width:300px;margin-left: 500px;}
+#l1{margin-right: 100px;}
+#l3{margin-right: 75px;}
+#l4{margin-right: 95px;}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+.new-form{text-align: center; }
+
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -53,9 +115,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -66,4 +128,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

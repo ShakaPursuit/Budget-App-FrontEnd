@@ -5,6 +5,7 @@ import Header from './Components/Header'
 import './index.css'
 import NewTransaction from './Components/NewTransactions'
 import ShowAllTransactions from './Components/ShowAllTransactions'
+import SingleTransaaction from './Components/TransactionCard'
 
 function App() {
  
@@ -16,7 +17,8 @@ function App() {
        <Header/> 
          <Routes>
             <Route path="/transactions/new" element={<NewTransaction/>}/>
-            <Route path="transactions" element={<ShowAllTransactions/>}/>
+            <Route path="/transactions" element={<ShowAllTransactions/>}/>
+            <Route path="/transactions/:index" element={<SingleTransaaction/>}/>
           </Routes>
        </Router> 
     </>

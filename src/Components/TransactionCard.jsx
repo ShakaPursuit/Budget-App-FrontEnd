@@ -29,6 +29,7 @@ const SingleTransaaction = () => {
 
 
     return (<>
+    
         {transaction.map((item, specificIndex) => {
             if (index == specificIndex) {
                 return (<div className="single" key={index} id={index}>
@@ -36,9 +37,9 @@ const SingleTransaaction = () => {
 
 
 
-                    <div id="date">{`${item.date}`}&nbsp;&nbsp;</div>
-                    <div id="company"> {`${item.item_name}`}&nbsp;&nbsp;-&nbsp;{item.from}</div>
-                    <div id="amount">  {`${item.amount}`}</div>
+                    <div id="single-date"><strong>{`${item.date}`}&nbsp;&nbsp;</strong></div>
+                    <div id="single-company"><strong> {`${item.item_name}`}</strong>&nbsp;&nbsp;-&nbsp;{item.from}</div>
+                    <div id="single-amount">  {`${item.amount}`}</div>
 
 
 

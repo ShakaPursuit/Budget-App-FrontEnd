@@ -88,7 +88,11 @@ a:hover {
 .single-Transact{padding:5px;border:3px solid white}
 #company{text-align: center;}
 #amount{margin-left:500px;}
-.single{margin-top: 200px;}
+.single{margin-top: 200px;border:2px solid white;border-radius: 15px;}
+#single-amount{margin-left:175px;margin-top: 100px;}
+#single-company,#single-name{margin-top: 100px;margin-left: 50px;}
+#single-date{margin-left: 150px;}
+#accountBalance{text-align: center;}
 /* body {
   margin: 0;
   display: flex;

@@ -87,7 +87,7 @@ a:hover {
 #transaction{margin-top: 200px; border:2px solid whitesmoke}
 .single-Transact{padding:5px;border:3px solid white}
 #company{text-align: center;}
-#amount{margin-left:150px;}
+/* #amount{margin-left:150px;} */
 .single{margin-top: 200px;border:2px solid white;border-radius: 15px;}
 #single-amount{margin-left:175px;margin-top: 100px;}
 #single-company,#single-name{margin-top: 100px;margin-left: 50px;}

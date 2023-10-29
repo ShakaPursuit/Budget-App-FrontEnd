@@ -95,6 +95,11 @@ a:hover {
 #accountBalance{text-align: center;}
 .green{color:lightgreen}
 .default{color:white}
+#login{text-align: center;margin-top: 200px;}
+.lf{border:2px solid red;}
+#userName{margin-top: 100px;margin-right: 50px;}
+#password{margin-top:100px ;margin-right: 50px;} 
+
 
 /* body {
   margin: 0;

@@ -23,17 +23,28 @@ body {
 /* :root{width:100%;height:100%} */
 
 
-header{background-color: lightcoral;height: 100px;position: fixed;width: 100%;}
+header{background-color: lightcoral;height: 175px;position: fixed;width: 100%;}
 
 #head{margin-top: 25px;}
-#new-Log{position:absolute; top:25px; right:10px;width:100px;height:50px}
+#new-Log{position:absolute; top:25px; right:10px;width:100px;height:50px; }
+button#new-Log{color: aqua;}
 #container{height:100vh}
 #label{margin-top: 100px;}
 td{text-align: center;}
 form{margin-top: 100px; border :2px solid white;border-radius: 50px;}
+Link:hover{color: whitesmoke}
 
+button#new-Log> a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+button#new-Log> a:hover{color:purple}
 
-
+button#home-button>a{color: white;
+  background-color: transparent;
+  text-decoration: none;}
+  button#home-button> a:hover{color:purple}
 :root {
   display: grid;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -77,11 +88,11 @@ div#root{height:100%};
 #l4{margin-right: 95px;}
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: red;
 }
 .new-form{text-align: center; }
 #transaction{margin-top: 200px; border:2px solid whitesmoke}
@@ -99,6 +110,11 @@ a:hover {
 .lf{border:2px solid red;}
 #userName{margin-top: 100px;margin-right: 50px;}
 #password{margin-top:100px ;margin-right: 50px;} 
+div#bal{margin-top: 200px;text-align: center;}
+
+div#headerBal{text-align: center;}
+#backButton{width: 100px;}
+/* #headerBal{margin-left: 200x;margin-left: 500px;} */
 
 
 /* body {

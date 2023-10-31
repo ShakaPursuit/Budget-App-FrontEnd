@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AlwaysShowBalance from "./showBalance";
 const ShowAllTransactions = () => {
     const [transaction, SetTransaction] = useState([])
     const[balance,setBalance]=useState('')
@@ -30,7 +31,7 @@ return "green"
             try{
                 const response=await fetch('http://localhost:8000/transactions/');
                 if(!response.ok){
-                throw new Error(`Request fiales with status: ${response.status}`);
+                throw new Error(`Request failed with status: ${response.status}`);
                 }
                 const data= await response.json();
                 SetTransaction(data);
@@ -51,7 +52,10 @@ return "green"
             }, [])
         
         return (<>
+        
+        
         <div id="transaction" >
+        <div><AlwaysShowBalance/></div>
             {transaction.map((item,index)=>{
                
 
@@ -69,7 +73,11 @@ return "green"
                     </div></>)
             })}
 <>
-<div id="accountBalance"><strong>Account Balance:&nbsp;&nbsp;<div id="balance" className={balanceColor()}>${(JSON.stringify(balance))}</div></strong></div>
+<div id="accountBalance">
+    <strong>Account Balance:&nbsp;&nbsp;
+        <div id="balance" className={balanceColor()}>${(JSON.stringify(balance))}</div></strong>
+        
+        </div>
 </>
         </div>
         </>)

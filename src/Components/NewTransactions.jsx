@@ -1,13 +1,18 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import AlwaysShowBalance from "./showBalance";
+import { Link } from "react-router-dom";
+
 
 
 const NewTransaction = () => {
-    const {index}=useParams()
+//    const {index}=useParams()
+// 
+    const[update,setUpdate]=useState("")
 
-    const [formData, setFormData] = useState([
+    const [formData, setFormData] = useState(
 
         {
             date: "",
@@ -18,61 +23,71 @@ const NewTransaction = () => {
         }
 
 
-    ])
+    )
+    const navigate=useNavigate()
     const handleChange=(event)=>{
         const value=event.target.value
         const name=event.target.name
-        const parsedVal=name==="amount"? parseFloat(value):value;
+        const parsedVal=name==="amount"? parseInt(value):value;
         setFormData({...formData,[name]:parsedVal})
         
     }
+    const handlePost=()=>{
+       
+        const fetchData = async () => {
+            try {
+              const response = await fetch("http://localhost:8000/transactions", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: { "Content-Type": "application/json" }
+              });
+      
+              if (!response.ok) {
+                throw new Error(`Request failed with the status: ${response.status}`);
+              }
+      
+              const data = await response.json();
+              console.log(data);
+              
+             
+
+              const updatedIndex= (data.length)-1;
+            //   setUpdate(updatedIndex)
+            console.log(updatedIndex)
+            console.log(data.length)
+            console.log(formData)
+            console.log(data)
+        
+              navigate(`/transactions/${updatedIndex}`)
+              
+            } catch (error) {
+                console.error("Fetch error:", error);
+            }
+        };
+        fetchData();
+        
+        
+        
+        
+    }
+    
     
     const handleSubmit = (event) => {
         event.preventDefault()
-        const fetchData = async () => {
-                  try {
-                    const response = await fetch("http://localhost:8000/transactions", {
-                      method: "POST",
-                      body: JSON.stringify(formData),
-                      headers: { "Content-Type": "application/json" }
-                    });
-            
-                    if (!response.ok) {
-                      throw new Error(`Request failed with the status: ${response.status}`);
-                    }
-            
-                    const data = await response.json();
-                    console.log(data);
-                    // handlePost()
-                  } catch (error) {
-                    console.error("Fetch error:", error);
-                  }
-                };
-                fetchData();
+        handlePost()
+       
+        
        
       
 
 
-    }
-    //adding Post Data in a fetch  to handle Form Data
-
-
-
-
-const handlePost=(indexx)=>{
-   const navigate= useNavigate()
-   
-
-   navigate(`/transactions/${index}`)
-
-   
-
-}
-
+            }
 
 
     return (<>
 
+<div id="bal"><AlwaysShowBalance/></div>
+<button id="backButton"><Link to="/transactions">🔙 All Transactions</Link></button>
         <div className="new-form">
             <form onSubmit={handleSubmit}>
 

@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 const LoginForm=()=>{
 
 
+    const [inputValues, setInputValues] = useState({
+        username: '', password: ''
+      });
+      
+      const handleChange = event => {
+        const { name, value } = event.target;
+        setInputValues({ ...inputValues, [name]: value });
+      };
+
+      const navigate=useNavigate()
+      const handleSubmit=(e)=>{
+        e.preventDefault()
+
+      const username='Shaka.L@budgetapp.com'
+      const password='testing123'
+
+      if(username===inputValues.username && password===inputValues.password){
 
 
+        navigate(`/transactions`)
+      }
+
+      }
 
     return(<>
     <div id="login">
-    <form className="lf">
+    <form className="lf" onSubmit={handleSubmit}>
         <label>UserName:
         </label>
-            <input id="userName" type="text"></input><br></br>
+            <input name="username" id="userName" type="text" onChange={handleChange}></input><br></br>
             <label>Password:
         </label>
-            <input  id="password"type="password"></input><br></br>
+            <input  name="password"  id="password"type="password" onChange={handleChange}></input><br></br>
             <button type="submit">Login</button>
         
         

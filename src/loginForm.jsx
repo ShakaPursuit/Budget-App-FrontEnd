@@ -26,9 +26,20 @@ const LoginForm=()=>{
 
 
         navigate(`/transactions`)
+      
+  }else{
+    //   if(username!==inputValues.username&& password!==inputValues.password){
+      
+
+      alert('ENTER CORRECT CRUDENTIALS')
+  }
+      
       }
 
-      }
+
+
+
+      
 
     return(<>
     <div id="login">

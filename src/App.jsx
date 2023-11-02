@@ -7,6 +7,7 @@ import NewTransaction from './Components/NewTransactions'
 import ShowAllTransactions from './Components/ShowAllTransactions'
 import SingleTransaaction from './Components/TransactionCard'
 import LoginForm from './loginForm'
+import EditTransaction from './Components/EditTransaction'
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
             <Route path="/transactions/new" element={<NewTransaction/>}/>
             <Route path="/transactions" element={<ShowAllTransactions/>}/>
             <Route path="/transactions/:index" element={<SingleTransaaction/>}/>
+            <Route path="/transactions/:index/edit" element={<EditTransaction/>}/>
           </Routes>
        </Router> 
     </>

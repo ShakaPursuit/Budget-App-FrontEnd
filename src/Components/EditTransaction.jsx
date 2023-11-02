@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+
 
 import { Link } from "react-router-dom";
 
-const SingleTransaaction = () => {
+const EditTransaction = () => {
 
-    const navigate=useNavigate()
+    // const navigate=useNavigate()
     const [transaction, setTransaction] = useState([])
     const { index } = useParams()
 
@@ -28,32 +28,17 @@ const SingleTransaaction = () => {
 
         fetchData()
     }, [])
-    const showDelete=()=>{
+    
 
-        console.log('Deleting .......')
-    }
-
-    const deleteIndex=(e)=>{
-        fetch(`http://localhost:8000/transactions/${index}`,{method:'DELETE'})
-        .then((response)=>{
-
-            if(!response.ok){
-                throw new Error('Something Went Wrong')
-            }
-            navigate('/transactions')
-
-        })
-        .catch((e)=>{console.log(e)})
-
-
-
-
-    }
-
+    
 
     return (<>
     <button id="backButton2"><Link to="/transactions">🔙 All Transactions</Link></button>
     
+        
+
+        <div>
+        {/* <div>{item.date}</div> */}
         {transaction.map((item, specificIndex) => {
             if (index == specificIndex) {
                 return (<div className="single" key={index} id={index}>
@@ -80,14 +65,11 @@ const SingleTransaaction = () => {
 
         })}
 
-        <div>
-
         </div>
-            <div id="transaction-specific"><button onClick={deleteIndex}>Delete Transaction</button></div>
-            <div><button><Link to={`/transactions/${index}/edit`}>Edit Transaction</Link></button></div>
+            <div id="transaction-specific"><button>Update Transaction</button></div>
 
 
     </>)
 }
 
-export default SingleTransaaction
+export default EditTransaction

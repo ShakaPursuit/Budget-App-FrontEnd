@@ -38,7 +38,7 @@ const EditTransaction = () => {
         
 
         <div>
-        {/* <div>{item.date}</div> */}
+       
         {transaction.map((item, specificIndex) => {
             if (index == specificIndex) {
                 return (<div className="single" key={index} id={index}>
@@ -46,9 +46,9 @@ const EditTransaction = () => {
 
 
 
-                    <div id="single-date"><strong>{`${item.date}`}&nbsp;&nbsp;</strong></div>
-                    <div id="single-company"><strong> {`${item.item_name}`}</strong>&nbsp;&nbsp;-&nbsp;{item.from}</div>
-                    <div id="single-amount">  {`${item.amount}`}</div>
+                    <div id="single-date"><strong><input value={item.date}></input>{`${item.date}`}&nbsp;&nbsp;</strong></div>
+                    <div id="single-company"><strong><input value={item.item_name}></input> {`${item.item_name}`}</strong>&nbsp;&nbsp;-&nbsp;{item.from}</div>
+                    <div id="single-amount">  <input value={item.amount}></input>{`${item.amount}`}</div>
 
 
 

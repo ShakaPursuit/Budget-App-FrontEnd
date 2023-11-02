@@ -6,7 +6,7 @@ import './index.css'
 import NewTransaction from './Components/NewTransactions'
 import ShowAllTransactions from './Components/ShowAllTransactions'
 import SingleTransaaction from './Components/TransactionCard'
-import LoginForm from './loginForm'
+import LoginForm from './Components/loginForm'
 import EditTransaction from './Components/EditTransaction'
 
 function App() {

@@ -31,7 +31,7 @@ const LoginForm=()=>{
     //   if(username!==inputValues.username&& password!==inputValues.password){
       
 
-      alert('ENTER CORRECT CRUDENTIALS')
+      alert('ENTER CORRECT UserName & Password')
   }
       
       }

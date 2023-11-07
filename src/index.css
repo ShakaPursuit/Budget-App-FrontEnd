@@ -1,8 +1,7 @@
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-
+  font-weight: 400px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -12,18 +11,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-} */
+}
 body {
   margin: 0;
-  width: 100%;
-  height: 100%;
+   width: 100vh; 
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 700px;
+  text-align: center;
+  padding: 50px;
+
 }
-/* :root{width:100%;height:100%} */
+:root{width:100vh;height:100vh}
 
 
-header{background-color: lightcoral;height: 175px;position: fixed;width: 100%;}
+header{background-color: darkslateblue;height: 175px;position: fixed;width: 95%;}
 
 #head{margin-top: 25px;}
 #new-Log{position:absolute; top:25px; right:10px;width:100px;height:50px; }
@@ -51,10 +54,17 @@ button#home-button>a{color: black;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  /* background-image: url('https://i.ibb.co/Vmjxr86/Screenshot-2023-11-03-at-9-39-32-PM.png') ; */
+  max-width: 700px;
+ 
+  background-repeat: no-repeat;
+  /* background-size: 75%; */
+background-position: fixed;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color:darkslateblue;
+  /* background-color:darkslateblue; */
+  background-color:lightsteelblue;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -63,9 +73,10 @@ button#home-button>a{color: black;
   -webkit-text-size-adjust: 100%;
   height:100%;
   /* max-width: 644px; */
-
+text-align: center;
 }
 input{margin-top: 150px;}
+div.single{background-color: darkslateblue;opacity: 80%;}
 
 
 div#root{display:grid ; max-width: 700px;}
@@ -78,7 +89,7 @@ a {
 a:hover {
   color: #535bf2;
 }
-body{height:100%;display: grid;}
+body{height:100%;display: grid;width:100vh}
 
 div#root{height:100%};
  th{text-align: center;}
@@ -96,19 +107,19 @@ a:hover {
   color: red;
 }
 .new-form{text-align: center; }
-#transaction{margin-top: 200px; border:2px solid whitesmoke}
+#transaction{margin-top: 200px; border:2px solid whitesmoke;justify-content: right;}
 .single-Transact{padding:5px;border:3px solid white}
 #company{text-align: center;}
 /* #amount{margin-left:150px;} */
-.single{margin-top: 200px;border:2px solid white;border-radius: 15px;}
-#single-amount{margin-left:175px;margin-top: 100px;}
+.single{margin-top: 200px;border:10px solid ghostwhite;border-radius: 15px;background-color:dark rgb(13, 1, 95);}
+#single-amount{margin-left:175px;margin-top: 100px; border:3px solid;background-color: darkslateblue;}
 #single-company,#single-name{margin-top: 100px;margin-left: 50px;}
 #single-date{margin-left: 400px;}
 #accountBalance{text-align: center;}
 .green{color:lightgreen}
 .default{color:white}
 #login{text-align: center;margin-top: 200px;}
-.lf{border:2px solid red;}
+/* .lf{border:2px solid red;text-align: center;} */
 #userName{margin-top: 100px;margin-right: 50px;}
 #password{margin-top:100px ;margin-right: 50px;} 
 div#bal{margin-top: 200px;text-align: center;}
@@ -117,9 +128,25 @@ div#headerBal{text-align: center;}
 #backButton{width: 100px;}
 #transaction-specific{margin-left:100px}
 /* #headerBal{margin-left: 200x;margin-left: 500px;} */
-button#backButton2{margin-top: 200px;width:25%;height:50px}
+button#backButton2{margin-top: 200px;width:25%;height:50px;margin-left: 100px;}
+#trans-Background{background-color: darkslateblue;border-top-left-radius:19px;border-top-right-radius: 19px;}
+#trans-Label{margin-left: 20px;}
+#trans-text{font-size: xx-small;}
+#single-company{border:2px solid;background-color:rgba(62, 56, 138, 0.97)}
+.single{background-repeat:unset;}
+#edit-form{background-color:darkgray;border:2px solid black}
+#date-Label{margin-left:50px; }
+div#transaction{justify-content:flex-end;}
+#master-card{width:50px;height:50px;}
+#swipe{opacity: 50%;width: 50px;margin-right: 425px;margin-top: 25px; border-radius: 50%;}
+h2{margin-left: 50px;}
+/* #login{margin-left:25%;} */
+ /* div#login{margin-right: 400px;}  */
 
-
+/* html{text-align: center;} */
+/* div#balance{justify-content: center;padding-left: 250px;} */
+/* div#root{justify-content: center;} */
+/* .single{background-color:;} */
 /* body {
   margin: 0;
   display: flex;

@@ -125,10 +125,11 @@ const EditTransaction = () => {
 
 
 
-                <form onSubmit={handleSubmit}>
-                    <div id="single-date"><strong><input name="date" id="input1" type="text" value={formData.date} onChange={handleChange}></input>{`${item.date}`}&nbsp;&nbsp;</strong></div>
-                    <div id="single-company"><strong><input name="item_name" id="input2"type="text"value={formData.item_name} onChange={handleChange}></input> {`${item.item_name}`}</strong>&nbsp;&nbsp;-&nbsp;{item.from}</div>
-                    <div id="single-amount">  <input id="input3" type="number" name="amount"value={formData.amount} onChange={handleChange}></input>{`${item.amount}`}</div>
+                <form id="edit-form"onSubmit={handleSubmit}>
+                    
+                    <div id="edit-single-date"><strong><label id="date-Label">EDIT DATE&nbsp;&nbsp;:&nbsp;&nbsp;<input name="date" id="input1" type="text" value={formData.date} onChange={handleChange}></input></label>&nbsp;&nbsp;&nbsp;&nbsp;<label>OriginalDate-{`${item.date}`}</label>&nbsp;&nbsp;</strong></div>
+                    <div id="edit-single-company"><strong><label>EDIT ITEM NAME&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="item_name" id="input2"type="text"value={formData.item_name} onChange={handleChange}></input></label> &nbsp;&nbsp;&nbsp;&nbsp;<label><br></br>Original Item Name:<br></br>{`${item.item_name}`}</label></strong>&nbsp;&nbsp;-&nbsp;{item.from}</div>
+                    <div id="edit-single-amount"> <strong><label>EDIT ITEM PRICE: <input id="input3" type="number" name="amount"value={formData.amount} onChange={handleChange}></input></label><label>Original Item Price{`${item.amount}`}</label></strong></div>
                     <div><input id ="input4" type="text" value={formData.from} onChange={handleChange}></input>{`${item.from}`}</div>
                     
                     

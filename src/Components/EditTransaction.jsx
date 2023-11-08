@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const EditTransaction = () => {
+    const API= import.meta.env.VITE_REACT_API_KEY
 
     const navigate=useNavigate()
     const [transaction, setTransaction] = useState([])

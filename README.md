@@ -8,8 +8,12 @@ A USER IS ABLE TO COMPLETE FULL CRUD on a Resource.
 
 The LINK to my trello is (https://trello.com/b/JqE8hOGA/budget-app)
 
-BACK END DEPLOYMENT RENDER (https://budget-app-backend-3nbm.onrender.com/transactions)
+BACK END DEPLOYMENT host RENDER (https://budget-app-backend-3nbm.onrender.com/transactions)
 
-FRONT END DEPOYMENT NETLIFY (https://spontaneous-bombolone-763875.netlify.app/)
+FRONT END DEPOYMENT host  NETLIFY (https://spontaneous-bombolone-763875.netlify.app/)
+
+GIT HUB BACK END REPO (https://github.com/ShakaPursuit/Budget-BackEnd)
+
+GIT HUB FRONT END REPO (https://github.com/ShakaPursuit/Budget-App-FrontEnd)
 
 HOPE YOU ENJOY

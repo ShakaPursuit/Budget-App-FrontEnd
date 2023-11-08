@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const SingleTransaaction = () => {
+    const API= import.meta.env.VITE_REACT_API_KEY
 
     const navigate=useNavigate()
     const [transaction, setTransaction] = useState([])
@@ -15,7 +16,7 @@ const SingleTransaaction = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/transactions/`);
+                const response = await fetch(`${API}`);
                 if (!response.ok) {
                     throw new Error(`Request failed with status: ${response.status}`);
                 }
@@ -34,7 +35,7 @@ const SingleTransaaction = () => {
     }
 
     const deleteIndex=(e)=>{
-        fetch(`http://localhost:8000/transactions/${index}`,{method:'DELETE'})
+        fetch(`${API}/${index}`,{method:'DELETE'})
         .then((response)=>{
 
             if(!response.ok){

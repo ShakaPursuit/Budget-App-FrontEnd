@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 
 const NewTransaction = () => {
+    const API= import.meta.env.VITE_REACT_API_KEY
 //    const {index}=useParams()
 // 
     const[update,setUpdate]=useState("")
@@ -36,7 +37,7 @@ const NewTransaction = () => {
        
         const fetchData = async () => {
             try {
-              const response = await fetch("http://localhost:8000/transactions", {
+              const response = await fetch(`${API}`, {
                 method: "POST",
                 body: JSON.stringify(formData),
                 headers: { "Content-Type": "application/json" }

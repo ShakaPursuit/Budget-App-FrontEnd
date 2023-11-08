@@ -6,7 +6,7 @@ const ShowAllTransactions = () => {
     const [transaction, SetTransaction] = useState([])
     const[balance,setBalance]=useState('')
 
-
+const API= import.meta.env.VITE_REACT_API_KEY
     
 
 const balanceColor=()=>{
@@ -29,7 +29,7 @@ return "green"
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const response=await fetch('http://localhost:8000/transactions/');
+                const response=await fetch(`${API}`);
                 if(!response.ok){
                 throw new Error(`Request failed with status: ${response.status}`);
                 }

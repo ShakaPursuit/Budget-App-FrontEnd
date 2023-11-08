@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-// import {JSON} from "json-form-data"
+
 
 
 import { Link } from "react-router-dom";
@@ -42,12 +42,12 @@ const EditTransaction = () => {
 
         fetchData()
     }, [index])
-    // const navigate=useNavigate()
+  
     const handleChange=(event)=>{
         const value=event.target.value
         const name=event.target.name
         const parsedVal=name==="amount"? parseInt(value):value;
-        // setFormData({...formData,[name]:parsedVal})
+        
         setFormData((prevFormData) => ({
             ...prevFormData,
             [name]: parsedVal,
@@ -78,11 +78,7 @@ const EditTransaction = () => {
              
 
               const updatedIndex= (data.length)-1;
-            //   setUpdate(updatedIndex)
-            // console.log(updatedIndex)
-            // console.log(data.length)
-            // console.log(formData)
-            // console.log(data)
+            
         
               navigate(`/transactions/${updatedIndex}`)
               

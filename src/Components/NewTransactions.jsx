@@ -53,12 +53,7 @@ const NewTransaction = () => {
              
 
               const updatedIndex= (data.length)-1;
-            //   setUpdate(updatedIndex)
-            console.log(updatedIndex)
-            console.log(data.length)
-            console.log(formData)
-            console.log(data)
-        
+            
               navigate(`/transactions/${updatedIndex}`)
               
             } catch (error) {

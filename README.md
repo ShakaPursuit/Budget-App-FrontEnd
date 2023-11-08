@@ -1,9 +1,15 @@
-# React + Vite
+WELCOME TO MY BUDGET APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MY APPLICATION IS AN MOBILE TRANSACTION APPLICATION.
 
-Currently, two official plugins are available:
+A USER CAN LOGIN, SEE ACCOUNT BALANCE ON ALL MAIN PAGES, VIEW ALL TRANSACTIONS. VIEW SINGLE TRANSACTONS, AS WELL AS UPDATE OR DELETE A SINGLE TRANSACTION
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Budget-App-FrontEnd
+A USER IS ABLE TO COMPLETE FULL CRUD on a Resource.
+
+The LINK to my trello is (https://trello.com/b/JqE8hOGA/budget-app)
+
+BACK END DEPLOYMENT RENDER (https://budget-app-backend-3nbm.onrender.com/transactions)
+
+FRONT END DEPOYMENT NETLIFY (https://spontaneous-bombolone-763875.netlify.app/)
+
+HOPE YOU ENJOY
